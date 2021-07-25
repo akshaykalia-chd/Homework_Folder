@@ -1,7 +1,7 @@
 import os
 
 
-class init_homework():
+class Homework:
     def __init__(self, student_data_file="./StudentData.csv", subject_data_file="./SubjectData.csv"):
         self.students_info = list()
         self.subjects_info = list()
@@ -91,8 +91,9 @@ class init_homework():
                                     except FileExistsError:
                                         pass
 
+
 if __name__ == '__main__':
-    Test = init_homework()
+    Test = Homework()
     Test.read_subject_info()
     Test.read_student_info()
     Test.prep_class_info()
